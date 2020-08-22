@@ -6,7 +6,7 @@ import { IPost } from '../../interfaces'
 import { useStyles } from './styles'
 import CardMedia from '@material-ui/core/CardMedia';
 
-const NoticeCard: React.FC<IPost> = ({ title, author, date, image, notice }) => {
+const NoticeCard: React.FC<IPost> = ({ title, author, image, notice }) => {
     const classes = useStyles();
     return (
         <>
@@ -24,7 +24,7 @@ const NoticeCard: React.FC<IPost> = ({ title, author, date, image, notice }) => 
                             image={image}
                         />
                     </Typography>
-                    <Typography align="center" variant="body2" className={classes.pos}>
+                    <Typography align="justify" variant="body2" className={classes.pos}>
                         {notice}
                     </Typography>
                 </CardContent>

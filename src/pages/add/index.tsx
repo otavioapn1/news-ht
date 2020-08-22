@@ -13,9 +13,8 @@ const Add: React.FC = () => {
                 alignItems="center"
                 md={12}
             >
-
                 <Box style={{ width: '45%', marginTop: '45px' }}>
-                    <TextField style={{ width: '100%' }} id="outlined-basic" label="Título" variant="outlined" />
+                    <TextField style={{ width: '100%' }} label="Título" variant="outlined" />
                 </Box>
                 <Box style={{ width: '45%', marginTop: '10px' }}>
                     <Typography>
@@ -31,7 +30,6 @@ const Add: React.FC = () => {
                         Salvar
                  </Button>
                 </Box>
-
             </Grid>
         </>
     )

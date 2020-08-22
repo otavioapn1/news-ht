@@ -20,6 +20,9 @@ export default function SignIn() {
     function onChangePassword(value: string) {
         setPassword(value)
     }
+    function goToAdd() {
+        window.location.href = '/add'
+    }
 
     return (
         <>
@@ -28,7 +31,7 @@ export default function SignIn() {
                 <Box className={classes.box}>
                     <Typography component="h1" variant="h5">
                         Login
-                </Typography>
+                   </Typography>
 
                     <TextField
                         onChange={(event) => onChangeEmail(event.target.value)}
@@ -52,6 +55,7 @@ export default function SignIn() {
                         variant="contained"
                         color="primary"
                         className={classes.login}
+                        onClick={goToAdd}
                     >
                         Entrar
                     </Button>
