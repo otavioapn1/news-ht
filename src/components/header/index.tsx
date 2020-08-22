@@ -9,14 +9,20 @@ import { useStyles } from './styles';
 export default function Header() {
     const classes = useStyles();
 
+    function goToLogin() {
+        window.location.href = '/login'
+    }
+
     return (
         <div className={classes.root}>
             <AppBar position="static">
                 <Toolbar>
                     <Typography variant="h6" className={classes.title}>
                         News
-          </Typography>
-                    <Button color="inherit">Login</Button>
+                    </Typography>
+                    <Button color='inherit' onClick={goToLogin}>
+                        Entrar
+                    </Button>
                 </Toolbar>
             </AppBar>
         </div>
