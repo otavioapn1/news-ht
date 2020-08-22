@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import { Box } from '@material-ui/core';
 import { useStyles } from './styles';
+import Header from '../../components/header';
 
 export default function SignIn() {
     const classes = useStyles();
@@ -21,38 +22,41 @@ export default function SignIn() {
     }
 
     return (
-        <Container component="main" maxWidth="xs">
-            <Box className={classes.box}>
-                <Typography component="h1" variant="h5">
-                    Login
+        <>
+            <Header />
+            <Container component="main" maxWidth="xs">
+                <Box className={classes.box}>
+                    <Typography component="h1" variant="h5">
+                        Login
                 </Typography>
 
-                <TextField
-                    onChange={(event) => onChangeEmail(event.target.value)}
-                    variant="outlined"
-                    margin="normal"
-                    fullWidth
-                    label="E-mail"
-                    autoFocus
-                />
-                <TextField
-                    onChange={(event) => onChangePassword(event.target.value)}
-                    variant="outlined"
-                    margin="normal"
-                    fullWidth
-                    label="Senha"
-                    type="password"
-                />
-                <Button
-                    type="submit"
-                    fullWidth
-                    variant="contained"
-                    color="primary"
-                    className={classes.login}
-                >
-                    Entrar
+                    <TextField
+                        onChange={(event) => onChangeEmail(event.target.value)}
+                        variant="outlined"
+                        margin="normal"
+                        fullWidth
+                        label="E-mail"
+                        autoFocus
+                    />
+                    <TextField
+                        onChange={(event) => onChangePassword(event.target.value)}
+                        variant="outlined"
+                        margin="normal"
+                        fullWidth
+                        label="Senha"
+                        type="password"
+                    />
+                    <Button
+                        type="submit"
+                        fullWidth
+                        variant="contained"
+                        color="primary"
+                        className={classes.login}
+                    >
+                        Entrar
                     </Button>
-            </Box>
-        </Container>
+                </Box>
+            </Container>
+        </>
     );
 }
